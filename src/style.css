@@ -2,10 +2,12 @@
 
 :root {
     --basic-padding: 0.5rem;
+    --minimal-spacing: 0.5rem;
     --basic-spacing: 1rem;
     --basic-border-radius: 5px;
     --main-color: #002B49;
     --secondary-color: #FF6C0E;
+    --day-color: #E8F6FD;
 }
 
 * {
@@ -15,11 +17,12 @@
 }
 
 body {
-    background: #F5F5F5;
+    background: var(--day-color);
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: var(--minimal-spacing);
 }
 
 header, main {
@@ -131,9 +134,16 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    min-width: 70px;
+    gap: 0.25rem;
     padding: var(--basic-padding);
     border-radius: var(--basic-border-radius);
     outline: 1px solid var(--main-color);
+}
+
+.hour-card > p {
+    white-space: nowrap;
 }
 
 #hourly-conditions {
@@ -168,4 +178,18 @@ main {
     padding: var(--basic-padding);
     border-radius: var(--basic-border-radius);
     outline: 1px solid var(--main-color);
+}
+
+#hourly-forecast, .day-card, .condition-card, #hourly-conditions {
+    background: white;
+}
+
+#hour-icon, #day-icon {
+    width: 20px;
+    height: auto;
+}
+
+.day-card > div {
+    display: flex;
+    gap: var(--minimal-spacing);
 }

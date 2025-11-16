@@ -1,5 +1,6 @@
 import { WeatherObject } from "./weather-object";
 import { getTemp, to12HourFormat } from "./data-manipulation";
+import { weatherIcons } from "./icons";
 
 function updateContent(htmlObject: HTMLElement, newValue: any) {
     return htmlObject!.textContent = newValue;
@@ -57,7 +58,8 @@ export function generateHourlyCards(dataObject: WeatherObject): void {
 
         card.innerHTML = `
             <p>${Math.round(hour.temp)}°</p>
-            <p>${hour.conditions}</p>
+            <p>${Math.round(hour.precipprob)}%</p>
+            <img id="hour-icon" src="${weatherIcons[hour.icon]}" alt="${hour.conditions}">
             <p>${to12HourFormat(hour.datetime)}</p>
         `;
         
@@ -77,7 +79,7 @@ export function generateDailyCards(dataObject: WeatherObject): void {
 
         card.innerHTML = `
             <p>${day.datetime}</p>
-            <p>${Math.round(day.temp)}</p>
+            <div><p>${Math.round(day.precipprob)}%</p><img id="day-icon" src="${weatherIcons[day.icon]}" alt="${day.conditions}"></div>
             <p>${Math.round(day.tempmax)}°/${Math.round(day.tempmin)}°</p>
         `;
 
