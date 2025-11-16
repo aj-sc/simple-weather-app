@@ -1,0 +1,171 @@
+/* Basic style config */
+
+:root {
+    --basic-padding: 0.5rem;
+    --basic-spacing: 1rem;
+    --basic-border-radius: 5px;
+    --main-color: #002B49;
+    --secondary-color: #FF6C0E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F5F5F5;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, main {
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--basic-spacing);
+    min-height: 0;  /* Important for flex children */
+}
+
+.content {
+    width: 100%;  /* Add this line */
+    max-width: 95vw;
+    margin: 0 auto;
+    padding: var(--basic-padding);
+}
+
+#search-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--basic-padding);
+    border-radius: var(--basic-border-radius);
+    padding: var(--basic-padding) 0;
+}
+
+#search-bar > input {
+    flex: 1;
+    padding: var(--basic-padding);
+    border-radius: var(--basic-border-radius);
+}
+
+#search-bar > button {
+    flex: 0 0 auto;
+    padding: var(--basic-padding);
+    border-radius: var(--basic-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-bar > button img {
+    width: 24px;
+    height: 24px;
+}
+
+.content > div {
+    width: 100%;
+}
+
+.content-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.content-item > div {
+    border-radius: var(--basic-border-radius);
+}
+
+#weather-info {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--basic-padding);
+}
+
+#main-temp {
+    font-size: 3.5em;
+}
+
+.rigth-info {
+    text-align: right;
+}
+
+#weather-conditions {
+    display: grid;
+    gap: var(--basic-spacing);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.condition-card {
+    outline: 1px solid var(--main-color);
+    border-radius: var(--basic-border-radius);
+    padding: var(--basic-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--basic-spacing);
+}
+
+#hourly-forecast {
+    display: flex;
+    gap: 0.5rem;
+    padding: var(--basic-padding);
+    overflow-x: auto;
+    scrollbar-width: none;      /* Firefox */
+}
+
+#hourly-forecast::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari */
+}
+
+.hour-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--basic-padding);
+    border-radius: var(--basic-border-radius);
+    outline: 1px solid var(--main-color);
+}
+
+#hourly-conditions {
+    outline: 1px solid var(--main-color);
+    padding: var(--basic-padding);
+}
+
+#condition-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--basic-spacing);
+}
+
+#condition-buttons > button {
+    flex: 1;
+    outline: 1px solid var(--main-color);
+    background: none;
+    border: none;
+    padding: 5px;
+    border-radius: var(--basic-border-radius);
+}
+
+#weekly-forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.day-card {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--basic-padding);
+    border-radius: var(--basic-border-radius);
+    outline: 1px solid var(--main-color);
+}
