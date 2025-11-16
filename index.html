@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+<script defer src="main.js"></script></head>
+<body>
+    <header>
+        <section class="content">
+            <div id="search-bar">
+                <input type="text" id="location-input" name="location" placeholder="Type the location">
+                <button id="search-btn">
+                    <img id="search-icon" src="8f550a041ce4bbca4b50.svg" alt="">
+                </button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="content">
+            <div id="main-content" class="content-item">
+                <h4>Now</h4>
+                <div id="weather-info">
+                    <div class="left-info">
+                        <h1 id="main-temp">25°</h1>
+                        <p>High: <span id="temp-high">26</span> - Low: <span id="temp-low">22</span></p>
+                    </div>
+                    <div class="rigth-info">
+                        <p id="weather-state">Ligth rain</p>
+                        <p>Feels like <span id="temp-sensation">28</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="content-item">
+                <h4>Current conditions</h4>
+                <div id="weather-conditions">
+                    <div class="condition-card">
+                        <p>Wind</p>
+                        <div class="condition-content">
+                            <div class="condition-info">
+                                <p><span id="wind-speed"></span> km/h</p>
+                                <p><span id="wind-direction"></span>°</p>
+                            </div>
+                            <div class="condition-icon"></div>
+                        </div>
+                    </div>
+                    <div class="condition-card">
+                        <p>Humidity</p>
+                        <div class="condition-content">
+                            <div class="condition-info">
+                                <p><span id="humidity-percentage"></span>%</p>
+                                <p id="dew-point">Dew point <span id="dew-value"></span>°</p>
+                            </div>
+                            <div class="condition-icon"></div>
+                        </div>
+                    </div>
+                    <div class="condition-card">
+                        <p>UV Index</p>
+                        <div class="condition-content">
+                            <div class="condition-info">
+                                <p id="uv-index"></p>
+                                <p id="uv-scale"></p>
+                            </div>
+                            <div class="condition-icon"></div>
+                        </div>
+                    </div>
+                    <div class="condition-card">
+                        <p>Pressure</p>
+                        <div class="condition-content">
+                            <div class="condition-info">
+                                <p id="pressure-value"></p>
+                                <p id="pressure-scale">mb</p>
+                            </div>
+                            <div class="condition-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="content-item">
+                <h4>Hourly forecast</h4>
+                <div id="hourly-forecast">
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="content-item">
+                <h4>Hourly conditions</h4>
+                <div id="hourly-conditions">
+                    <div id="condition-buttons">
+                        <button>Precipitation</button>
+                        <button>Wind</button>
+                        <button>Humidity</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="content-item">
+                <h4>7-day forecast</h4>
+                <div id="weekly-forecast">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
