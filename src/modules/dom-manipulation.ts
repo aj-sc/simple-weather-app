@@ -2,52 +2,48 @@ import { WeatherObject } from "./weather-object";
 import { getTemp, to12HourFormat } from "./data-manipulation";
 import { weatherIcons } from "./icons";
 
-function updateContent(htmlObject: HTMLElement, newValue: any) {
-    return htmlObject!.textContent = newValue;
+export function updateMainInfo(dataObject: WeatherObject): void {
+    const mainTemp = document.querySelector("#main-temp")!;
+    const highAndLow = document.querySelector("#high-low")!;
+    const weatherState = document.querySelector("#weather-state")!;
+    const feelsLike = document.querySelector("#temp-sensation")!;
+
+    const maxTemp = Math.round(getTemp(dataObject.days, "max"));
+    const minTemp = Math.round(getTemp(dataObject.days, "min"));
+
+    mainTemp.textContent = `${dataObject.currentConditions.temp}°`;
+    highAndLow.textContent = `High: ${maxTemp}° - Low: ${minTemp}°`;
+
+    weatherState.textContent = dataObject.currentConditions.conditions;
+    feelsLike.textContent = `Feels like ${Math.round(dataObject.currentConditions.feelslike)}°`;
 }
 
-export function updateMainInfo(dataObject: WeatherObject): void {
-    const mainTemp = document.querySelector<HTMLSpanElement>("#main-temp")!;
-    const tempHigh = document.querySelector<HTMLSpanElement>("#temp-high")!;
-    const tempLow = document.querySelector<HTMLSpanElement>("#temp-low")!;
-
-    const weatherState = document.querySelector<HTMLParagraphElement>("#weather-state")!;
-    const feelsLike = document.querySelector<HTMLSpanElement>("#temp-sensation")!;
-
-    updateContent(mainTemp, `${dataObject.currentConditions.temp}°`);
-    updateContent(tempHigh, `${Math.round(getTemp(dataObject.days, "max"))}°`);
-    updateContent(tempLow, `${Math.round(getTemp(dataObject.days, "min"))}°`);
-
-    updateContent(weatherState, dataObject.currentConditions.conditions);
-    updateContent(feelsLike, `${dataObject.currentConditions.feelslike}°`);
-};
-
 export function updateConditionCards(dataObject: WeatherObject): void {
-    const windSpeed = document.querySelector<HTMLSpanElement>("#wind-speed")!;
-    const windDirection = document.querySelector<HTMLParagraphElement>("#wind-direction")!;
+    const windSpeed = document.querySelector("#wind-speed")!;
+    const windDirection = document.querySelector("#wind-direction")!;
 
-    const humidityPerc = document.querySelector<HTMLParagraphElement>("#humidity-percentage")!;
-    const dewPoint = document.querySelector<HTMLSpanElement>("#dew-value")!;
+    const humidityPerc = document.querySelector("#humidity-percentage")!;
+    const dewPoint = document.querySelector("#dew-point")!;
 
-    const uvIndex = document.querySelector<HTMLParagraphElement>("#uv-index")!;
-    const uvScale = document.querySelector<HTMLParagraphElement>("#uv-scale")!;
+    const uvIndex = document.querySelector("#uv-index")!;
+    const uvScale = document.querySelector("#uv-scale")!;
 
-    const pressure = document.querySelector<HTMLParagraphElement>("#pressure-value")!;
+    const pressure = document.querySelector("#pressure-value")!;
 
-    updateContent(windSpeed, dataObject.currentConditions.windspeed);
-    updateContent(windDirection, dataObject.currentConditions.winddir);
+    windSpeed.textContent = `${dataObject.currentConditions.windspeed} km/h`;
+    windDirection.textContent = `${dataObject.currentConditions.winddir}°`;
 
-    updateContent(humidityPerc, dataObject.currentConditions.humidity);
-    updateContent(dewPoint, dataObject.currentConditions.dew);
+    humidityPerc.textContent = `${dataObject.currentConditions.humidity}%`;
+    dewPoint.textContent = `Dew point ${dataObject.currentConditions.dew}°`;
 
-    updateContent(uvIndex, dataObject.currentConditions.uvindex);
-    updateContent(uvScale, dataObject.currentConditions.uvindex);
+    uvIndex.textContent = dataObject.currentConditions.uvindex;
+    uvScale.textContent = dataObject.currentConditions.uvindex;
 
-    updateContent(pressure, dataObject.currentConditions.pressure);
-};
+    pressure.textContent = dataObject.currentConditions.pressure;
+}
 
 export function generateHourlyCards(dataObject: WeatherObject): void {
-    const cardContainer = document.querySelector<HTMLDivElement>("#hourly-forecast")!;
+    const cardContainer = document.querySelector("#hourly-forecast")!;
     const hourlyData = dataObject.days[0].hours; // Index zero represents the current day
     
     cardContainer.innerHTML = "";
@@ -58,17 +54,16 @@ export function generateHourlyCards(dataObject: WeatherObject): void {
 
         card.innerHTML = `
             <p>${Math.round(hour.temp)}°</p>
-            <p>${Math.round(hour.precipprob)}%</p>
             <img id="hour-icon" src="${weatherIcons[hour.icon]}" alt="${hour.conditions}">
             <p>${to12HourFormat(hour.datetime)}</p>
         `;
         
         cardContainer.append(card);
     }
-};
+}
 
 export function generateDailyCards(dataObject: WeatherObject): void {
-    const cardContainer = document.querySelector<HTMLDivElement>("#weekly-forecast")!;
+    const cardContainer = document.querySelector("#weekly-forecast")!;
     const weekData = dataObject.days.slice(0, 7);
 
     cardContainer.innerHTML = "";
@@ -86,5 +81,3 @@ export function generateDailyCards(dataObject: WeatherObject): void {
         cardContainer.append(card);
     }
 }
-
-

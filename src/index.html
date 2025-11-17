@@ -23,11 +23,11 @@
                 <div id="weather-info">
                     <div class="left-info">
                         <h1 id="main-temp"></h1>
-                        <p>High: <span id="temp-high">26</span> - Low: <span id="temp-low">22</span></p>
+                        <p id="high-low"></p>
                     </div>
                     <div class="rigth-info">
                         <p id="weather-state"></p>
-                        <p>Feels like <span id="temp-sensation"></span></p>
+                        <p id="temp-sensation"></p>
                     </div>
                 </div>
             </div>
@@ -40,20 +40,20 @@
                         <p>Wind</p>
                         <div class="condition-content">
                             <div class="condition-info">
-                                <p><span id="wind-speed"></span> km/h</p>
-                                <p><span id="wind-direction"></span>°</p>
+                                <p id="wind-speed"></p>
+                                <p id="wind-direction"></p>
                             </div>
-                            <div class="condition-icon"></div>
+                            <img src="./assets/weather-icons/wind_weather_icon_176797.png" alt="">
                         </div>
                     </div>
                     <div class="condition-card">
                         <p>Humidity</p>
                         <div class="condition-content">
                             <div class="condition-info">
-                                <p><span id="humidity-percentage"></span>%</p>
-                                <p id="dew-point">Dew point <span id="dew-value"></span>°</p>
+                                <p id="humidity-percentage"></p>
+                                <p id="dew-point"></p>
                             </div>
-                            <div class="condition-icon"></div>
+                            <img src="./assets/weather-icons/high_temperature_weather_icon_176783.png" alt="">
                         </div>
                     </div>
                     <div class="condition-card">
@@ -63,7 +63,7 @@
                                 <p id="uv-index"></p>
                                 <p id="uv-scale"></p>
                             </div>
-                            <div class="condition-icon"></div>
+                            <img src="./assets/weather-icons/sunny_day_weather_icon_176809.png" alt="">
                         </div>
                     </div>
                     <div class="condition-card">
@@ -73,7 +73,7 @@
                                 <p id="pressure-value"></p>
                                 <p id="pressure-scale">mb</p>
                             </div>
-                            <div class="condition-icon"></div>
+                            <img src="./assets/weather-icons/pressure_4667.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -88,22 +88,13 @@
         </section>
         <section class="content">
             <div class="content-item">
-                <h4>Hourly conditions</h4>
-                <div id="hourly-conditions">
-                    <div id="condition-buttons">
-                        <button>Precipitation</button>
-                        <button>Wind</button>
-                        <button>Humidity</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="content">
-            <div class="content-item">
                 <h4>7-day forecast</h4>
                 <div id="weekly-forecast">
                 </div>
             </div>
+        </section>
+        <section class="content" id="created-by">
+            <a href="https://github.com/aj-sc">aj-sc</a>
         </section>
     </main>
 </body>

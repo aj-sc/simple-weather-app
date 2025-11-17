@@ -1,3 +1,5 @@
+import { WeatherObject } from "./weather-object";
+
 export function getTemp(data: any, tempPoint: string): number {
     return tempPoint === "min" ? data[0].tempmin : data[0].tempmax;
 }
