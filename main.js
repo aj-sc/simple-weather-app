@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `/* Basic style config */\r\n\r\n:root {\r\n    --basic-padding: 0.5rem;\r\n    --basic-spacing: 1rem;\r\n    --basic-border-radius: 5px;\r\n    --main-color: #002B49;\r\n    --secondary-color: #FF6C0E;\r\n}\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nbody {\r\n    background: #F5F5F5;\r\n    font-family: sans-serif;\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-height: 100vh;\r\n}\r\n\r\nheader, main {\r\n    width: 100%;\r\n}\r\n\r\nmain {\r\n    flex: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: var(--basic-spacing);\r\n    min-height: 0;  /* Important for flex children */\r\n}\r\n\r\n.content {\r\n    width: 100%;  /* Add this line */\r\n    max-width: 95vw;\r\n    margin: 0 auto;\r\n    padding: var(--basic-padding);\r\n}\r\n\r\n#search-bar {\r\n    width: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    gap: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n    padding: var(--basic-padding) 0;\r\n}\r\n\r\n#search-bar > input {\r\n    flex: 1;\r\n    padding: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n}\r\n\r\n#search-bar > button {\r\n    flex: 0 0 auto;\r\n    padding: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n#search-bar > button img {\r\n    width: 24px;\r\n    height: 24px;\r\n}\r\n\r\n.content > div {\r\n    width: 100%;\r\n}\r\n\r\n.content-item {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 0.5rem;\r\n}\r\n\r\n.content-item > div {\r\n    border-radius: var(--basic-border-radius);\r\n}\r\n\r\n#weather-info {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    padding: var(--basic-padding);\r\n}\r\n\r\n#main-temp {\r\n    font-size: 3.5em;\r\n}\r\n\r\n.rigth-info {\r\n    text-align: right;\r\n}\r\n\r\n#weather-conditions {\r\n    display: grid;\r\n    gap: var(--basic-spacing);\r\n    grid-template-columns: repeat(2, 1fr);\r\n    grid-template-rows: repeat(2, 1fr);\r\n}\r\n\r\n.condition-card {\r\n    outline: 1px solid var(--main-color);\r\n    border-radius: var(--basic-border-radius);\r\n    padding: var(--basic-padding);\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: var(--basic-spacing);\r\n}\r\n\r\n#hourly-forecast {\r\n    display: flex;\r\n    gap: 0.5rem;\r\n    padding: var(--basic-padding);\r\n    overflow-x: auto;\r\n    scrollbar-width: none;      /* Firefox */\r\n}\r\n\r\n#hourly-forecast::-webkit-scrollbar {\r\n    display: none;              /* Chrome, Safari */\r\n}\r\n\r\n.hour-card {\r\n    flex: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n    padding: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n    outline: 1px solid var(--main-color);\r\n}\r\n\r\n#hourly-conditions {\r\n    outline: 1px solid var(--main-color);\r\n    padding: var(--basic-padding);\r\n}\r\n\r\n#condition-buttons {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    gap: var(--basic-spacing);\r\n}\r\n\r\n#condition-buttons > button {\r\n    flex: 1;\r\n    outline: 1px solid var(--main-color);\r\n    background: none;\r\n    border: none;\r\n    padding: 5px;\r\n    border-radius: var(--basic-border-radius);\r\n}\r\n\r\n#weekly-forecast {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 0.5rem;\r\n}\r\n\r\n.day-card {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    padding: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n    outline: 1px solid var(--main-color);\r\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://simple-weather-app/./src/style.css?./node_modules/css-loader/dist/cjs.js\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `/* Basic style config */\r\n\r\n:root {\r\n    --basic-padding: 0.5rem;\r\n    --minimal-spacing: 0.5rem;\r\n    --basic-spacing: 1rem;\r\n    --basic-border-radius: 5px;\r\n    --main-color: #002B49;\r\n    --secondary-color: #FF6C0E;\r\n    --day-color: #E8F6FD;\r\n}\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nbody {\r\n    background: var(--day-color);\r\n    font-family: sans-serif;\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-height: 100vh;\r\n    margin: var(--minimal-spacing);\r\n}\r\n\r\nheader, main {\r\n    width: 100%;\r\n}\r\n\r\nmain {\r\n    flex: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: var(--basic-spacing);\r\n    min-height: 0;  /* Important for flex children */\r\n}\r\n\r\n.content {\r\n    width: 100%;  /* Add this line */\r\n    max-width: 95vw;\r\n    margin: 0 auto;\r\n    padding: var(--basic-padding);\r\n}\r\n\r\n#search-bar {\r\n    width: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    gap: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n    padding: var(--basic-padding) 0;\r\n}\r\n\r\n#search-bar > input {\r\n    flex: 1;\r\n    padding: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n}\r\n\r\n#search-bar > button {\r\n    flex: 0 0 auto;\r\n    padding: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n#search-bar > button img {\r\n    width: 24px;\r\n    height: 24px;\r\n}\r\n\r\n.content > div {\r\n    width: 100%;\r\n}\r\n\r\n.content-item {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 0.5rem;\r\n}\r\n\r\n.content-item > div {\r\n    border-radius: var(--basic-border-radius);\r\n}\r\n\r\n#weather-info {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    padding: var(--basic-padding);\r\n}\r\n\r\n#main-temp {\r\n    font-size: 3.5em;\r\n}\r\n\r\n.rigth-info {\r\n    text-align: right;\r\n}\r\n\r\n#weather-conditions {\r\n    display: grid;\r\n    gap: var(--basic-spacing);\r\n    grid-template-columns: repeat(2, 1fr);\r\n    grid-template-rows: repeat(2, 1fr);\r\n}\r\n\r\n.condition-card {\r\n    outline: 1px solid var(--main-color);\r\n    border-radius: var(--basic-border-radius);\r\n    padding: var(--basic-padding);\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: var(--basic-spacing);\r\n}\r\n\r\n#hourly-forecast {\r\n    display: flex;\r\n    gap: 0.5rem;\r\n    padding: var(--basic-padding);\r\n    overflow-x: auto;\r\n    scrollbar-width: none;/* Firefox */\r\n    outline: 1px solid var(--main-color);\r\n}\r\n\r\n#hourly-forecast::-webkit-scrollbar {\r\n    display: none;              /* Chrome, Safari */\r\n}\r\n\r\n.hour-card {\r\n    flex: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    min-width: 70px;\r\n    gap: 0.25rem;\r\n    padding: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n    outline: 1px solid var(--main-color);\r\n}\r\n\r\n.hour-card > p {\r\n    white-space: nowrap;\r\n}\r\n\r\n#hourly-conditions {\r\n    outline: 1px solid var(--main-color);\r\n    padding: var(--basic-padding);\r\n}\r\n\r\n#condition-buttons {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    gap: var(--basic-spacing);\r\n}\r\n\r\n#condition-buttons > button {\r\n    flex: 1;\r\n    outline: 1px solid var(--main-color);\r\n    background: none;\r\n    border: none;\r\n    padding: 5px;\r\n    border-radius: var(--basic-border-radius);\r\n}\r\n\r\n#weekly-forecast {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 0.5rem;\r\n}\r\n\r\n.day-card {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    padding: var(--basic-padding);\r\n    border-radius: var(--basic-border-radius);\r\n    outline: 1px solid var(--main-color);\r\n}\r\n\r\n#hourly-forecast, .day-card, .condition-card, #hourly-conditions {\r\n    background: white;\r\n}\r\n\r\n#hour-icon, #day-icon {\r\n    width: 20px;\r\n    height: auto;\r\n}\r\n\r\n.day-card > div {\r\n    display: flex;\r\n    gap: var(--minimal-spacing);\r\n}\r\n\r\n#condition-data {\r\n    outline: 1px solid var(--main-color);\r\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://simple-weather-app/./src/style.css?./node_modules/css-loader/dist/cjs.js\n}");
 
 /***/ }),
 
@@ -110,13 +110,233 @@ eval("{module.exports = __webpack_require__.p + \"8f550a041ce4bbca4b50.svg\";\n\
 
 /***/ }),
 
+/***/ "./src/assets/weather-icons/clear-day.png":
+/*!************************************************!*\
+  !*** ./src/assets/weather-icons/clear-day.png ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"49a92278086475c7c840.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/clear-day.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/clear-night.png":
+/*!**************************************************!*\
+  !*** ./src/assets/weather-icons/clear-night.png ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"d5b481d65d6728015aa7.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/clear-night.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/cloudy.png":
+/*!*********************************************!*\
+  !*** ./src/assets/weather-icons/cloudy.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"ff85b2e81d3543451d70.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/cloudy.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/fog.png":
+/*!******************************************!*\
+  !*** ./src/assets/weather-icons/fog.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"bec51c6b905e71a69c73.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/fog.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/hail.png":
+/*!*******************************************!*\
+  !*** ./src/assets/weather-icons/hail.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"e5a324637505df18d2e5.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/hail.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/partly-cloudy-day.png":
+/*!********************************************************!*\
+  !*** ./src/assets/weather-icons/partly-cloudy-day.png ***!
+  \********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"9ccf1783955d7c47bce4.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/partly-cloudy-day.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/partly-cloudy-night.png":
+/*!**********************************************************!*\
+  !*** ./src/assets/weather-icons/partly-cloudy-night.png ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"e82491d914f1b4e751e7.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/partly-cloudy-night.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/rain-snow-showers-day.png":
+/*!************************************************************!*\
+  !*** ./src/assets/weather-icons/rain-snow-showers-day.png ***!
+  \************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"4e3195e20db723b75b2f.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/rain-snow-showers-day.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/rain-snow-showers-night.png":
+/*!**************************************************************!*\
+  !*** ./src/assets/weather-icons/rain-snow-showers-night.png ***!
+  \**************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"c2788e154501ed6e195a.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/rain-snow-showers-night.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/rain-snow.png":
+/*!************************************************!*\
+  !*** ./src/assets/weather-icons/rain-snow.png ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"560fa082b9506b2826e8.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/rain-snow.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/rain.png":
+/*!*******************************************!*\
+  !*** ./src/assets/weather-icons/rain.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"89c8d14229f87a236fe0.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/rain.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/showers-day.png":
+/*!**************************************************!*\
+  !*** ./src/assets/weather-icons/showers-day.png ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"302ae48c90c390866931.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/showers-day.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/showers-night.png":
+/*!****************************************************!*\
+  !*** ./src/assets/weather-icons/showers-night.png ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"fbefbc64a4c9b84edb6a.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/showers-night.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/sleet.png":
+/*!********************************************!*\
+  !*** ./src/assets/weather-icons/sleet.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"0335ffe923ac8081fcd9.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/sleet.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/snow-showers-day.png":
+/*!*******************************************************!*\
+  !*** ./src/assets/weather-icons/snow-showers-day.png ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"653aae7993df59bc9edf.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/snow-showers-day.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/snow-showers-night.png":
+/*!*********************************************************!*\
+  !*** ./src/assets/weather-icons/snow-showers-night.png ***!
+  \*********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"992f3427910628059ef4.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/snow-showers-night.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/snow.png":
+/*!*******************************************!*\
+  !*** ./src/assets/weather-icons/snow.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"f72b71c0da5cb78e0844.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/snow.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/thunder-rain.png":
+/*!***************************************************!*\
+  !*** ./src/assets/weather-icons/thunder-rain.png ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"f216f30e368ba0b6eef0.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/thunder-rain.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/thunder-showers-day.png":
+/*!**********************************************************!*\
+  !*** ./src/assets/weather-icons/thunder-showers-day.png ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"08dc25396dd350cafbce.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/thunder-showers-day.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/thunder-showers-night.png":
+/*!************************************************************!*\
+  !*** ./src/assets/weather-icons/thunder-showers-night.png ***!
+  \************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"b94c0677a77e0021caf4.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/thunder-showers-night.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/thunder.png":
+/*!**********************************************!*\
+  !*** ./src/assets/weather-icons/thunder.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"68c58b5ee4603ed53a41.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/thunder.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/weather-icons/wind.png":
+/*!*******************************************!*\
+  !*** ./src/assets/weather-icons/wind.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"7689f6c733214fb7a9f8.png\";\n\n//# sourceURL=webpack://simple-weather-app/./src/assets/weather-icons/wind.png?\n}");
+
+/***/ }),
+
 /***/ "./src/index.ts":
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("{\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n__webpack_require__(/*! ./style.css */ \"./src/style.css\");\nconst globe_svg_1 = __importDefault(__webpack_require__(/*! ./assets/globe.svg */ \"./src/assets/globe.svg\"));\nconst weather_object_1 = __webpack_require__(/*! ./modules/weather-object */ \"./src/modules/weather-object.ts\");\nconst dom_manipulation_1 = __webpack_require__(/*! ./modules/dom-manipulation */ \"./src/modules/dom-manipulation.ts\");\ndocument.querySelector(\"#search-icon\").setAttribute(\"src\", globe_svg_1.default);\nconst searchBtn = document.querySelector(\"#search-btn\");\nconst locationInput = document.querySelector(\"#location-input\");\nsearchBtn?.addEventListener(\"click\", async () => {\n    const locationValue = locationInput.value;\n    if (locationValue.trim() !== \"\") {\n        const data = await (0, weather_object_1.fetchWeatherData)(locationValue);\n        console.log(data);\n        (0, dom_manipulation_1.updateMainInfo)(data);\n        (0, dom_manipulation_1.updateConditionCards)(data);\n        (0, dom_manipulation_1.generateHourlyCards)(data);\n        (0, dom_manipulation_1.generateDailyCards)(data);\n        locationInput.value = \"\";\n    }\n    else {\n        alert(\"Error, type a valid location\");\n    }\n});\n\n\n//# sourceURL=webpack://simple-weather-app/./src/index.ts?\n}");
+eval("{\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n__webpack_require__(/*! ./style.css */ \"./src/style.css\");\nconst globe_svg_1 = __importDefault(__webpack_require__(/*! ./assets/globe.svg */ \"./src/assets/globe.svg\"));\nconst weather_object_1 = __webpack_require__(/*! ./modules/weather-object */ \"./src/modules/weather-object.ts\");\nconst dom_manipulation_1 = __webpack_require__(/*! ./modules/dom-manipulation */ \"./src/modules/dom-manipulation.ts\");\ndocument.querySelector(\"#search-icon\").setAttribute(\"src\", globe_svg_1.default);\nconst searchBtn = document.querySelector(\"#search-btn\");\nconst locationInput = document.querySelector(\"#location-input\");\nconst conditionButtons = document.querySelectorAll(\".condition-button\");\nlet defaultLocation = localStorage.getItem(\"defaultLocation\");\nif (!defaultLocation) {\n    defaultLocation = prompt(\"Type the name of your current city (this would be your default location): \");\n    localStorage.setItem(\"defaultLocation\", defaultLocation);\n}\nwindow.addEventListener(\"load\", async () => {\n    const data = await (0, weather_object_1.fetchWeatherData)(defaultLocation);\n    (0, dom_manipulation_1.updateMainInfo)(data);\n    (0, dom_manipulation_1.updateConditionCards)(data);\n    (0, dom_manipulation_1.generateHourlyCards)(data);\n    (0, dom_manipulation_1.generateDailyCards)(data);\n});\nsearchBtn?.addEventListener(\"click\", async () => {\n    const locationValue = locationInput.value;\n    if (locationValue.trim() !== \"\") {\n        const data = await (0, weather_object_1.fetchWeatherData)(locationValue);\n        console.log(data);\n        (0, dom_manipulation_1.updateMainInfo)(data);\n        (0, dom_manipulation_1.updateConditionCards)(data);\n        (0, dom_manipulation_1.generateHourlyCards)(data);\n        (0, dom_manipulation_1.generateDailyCards)(data);\n        locationInput.value = \"\";\n    }\n    else {\n        alert(\"Error, type a valid location\");\n    }\n});\n\n\n//# sourceURL=webpack://simple-weather-app/./src/index.ts?\n}");
 
 /***/ }),
 
@@ -126,7 +346,7 @@ eval("{\nvar __importDefault = (this && this.__importDefault) || function (mod) 
   \******************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-eval("{\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.getTemp = getTemp;\nexports.to12HourFormat = to12HourFormat;\nfunction getTemp(data, tempPoint) {\n    return tempPoint === \"min\" ? data[0].tempmin : data[0].tempmax;\n}\nfunction to12HourFormat(dateString) {\n    const hour = Number(dateString.slice(0, 2));\n    if (hour === 0)\n        return \"12 AM\";\n    if (hour < 12)\n        return `${hour} AM`;\n    4;\n    if (hour === 12)\n        return `12 PM`;\n    return `${Number(hour) - 12} PM`;\n}\n\n\n//# sourceURL=webpack://simple-weather-app/./src/modules/data-manipulation.ts?\n}");
+eval("{\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.getTemp = getTemp;\nexports.to12HourFormat = to12HourFormat;\nfunction getTemp(data, tempPoint) {\n    return tempPoint === \"min\" ? data[0].tempmin : data[0].tempmax;\n}\nfunction to12HourFormat(dateString) {\n    const hour = Number(dateString.slice(0, 2));\n    if (hour === 0)\n        return \"12 AM\";\n    if (hour < 12)\n        return `${hour} AM`;\n    if (hour === 12)\n        return `12 PM`;\n    return `${Number(hour) - 12} PM`;\n}\n\n\n//# sourceURL=webpack://simple-weather-app/./src/modules/data-manipulation.ts?\n}");
 
 /***/ }),
 
@@ -136,7 +356,17 @@ eval("{\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexp
   \*****************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("{\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.updateMainInfo = updateMainInfo;\nexports.updateConditionCards = updateConditionCards;\nexports.generateHourlyCards = generateHourlyCards;\nexports.generateDailyCards = generateDailyCards;\nconst data_manipulation_1 = __webpack_require__(/*! ./data-manipulation */ \"./src/modules/data-manipulation.ts\");\nfunction updateContent(htmlObject, newValue) {\n    return htmlObject.textContent = newValue;\n}\nfunction updateMainInfo(dataObject) {\n    const mainTemp = document.querySelector(\"#main-temp\");\n    const tempHigh = document.querySelector(\"#temp-high\");\n    const tempLow = document.querySelector(\"#temp-low\");\n    const weatherState = document.querySelector(\"#weather-state\");\n    const feelsLike = document.querySelector(\"#temp-sensation\");\n    updateContent(mainTemp, `${dataObject.currentConditions.temp}°`);\n    updateContent(tempHigh, `${Math.round((0, data_manipulation_1.getTemp)(dataObject.days, \"max\"))}°`);\n    updateContent(tempLow, `${Math.round((0, data_manipulation_1.getTemp)(dataObject.days, \"min\"))}°`);\n    updateContent(weatherState, dataObject.currentConditions.conditions);\n    updateContent(feelsLike, `${dataObject.currentConditions.feelslike}°`);\n}\n;\nfunction updateConditionCards(dataObject) {\n    const windSpeed = document.querySelector(\"#wind-speed\");\n    const windDirection = document.querySelector(\"#wind-direction\");\n    const humidityPerc = document.querySelector(\"#humidity-percentage\");\n    const dewPoint = document.querySelector(\"#dew-value\");\n    const uvIndex = document.querySelector(\"#uv-index\");\n    const uvScale = document.querySelector(\"#uv-scale\");\n    const pressure = document.querySelector(\"#pressure-value\");\n    updateContent(windSpeed, dataObject.currentConditions.windspeed);\n    updateContent(windDirection, dataObject.currentConditions.winddir);\n    updateContent(humidityPerc, dataObject.currentConditions.humidity);\n    updateContent(dewPoint, dataObject.currentConditions.dew);\n    updateContent(uvIndex, dataObject.currentConditions.uvindex);\n    updateContent(uvScale, dataObject.currentConditions.uvindex);\n    updateContent(pressure, dataObject.currentConditions.pressure);\n}\n;\nfunction generateHourlyCards(dataObject) {\n    const cardContainer = document.querySelector(\"#hourly-forecast\");\n    const hourlyData = dataObject.days[0].hours; // Index zero represents the current day\n    cardContainer.innerHTML = \"\";\n    for (const hour of hourlyData) {\n        const card = document.createElement(\"div\");\n        card.classList.add(\"hour-card\");\n        card.innerHTML = `\r\n            <p>${Math.round(hour.temp)}°</p>\r\n            <p>${hour.conditions}</p>\r\n            <p>${(0, data_manipulation_1.to12HourFormat)(hour.datetime)}</p>\r\n        `;\n        cardContainer.append(card);\n    }\n}\n;\nfunction generateDailyCards(dataObject) {\n    const cardContainer = document.querySelector(\"#weekly-forecast\");\n    const weekData = dataObject.days.slice(0, 7);\n    cardContainer.innerHTML = \"\";\n    for (const day of weekData) {\n        const card = document.createElement(\"div\");\n        card.classList.add(\"day-card\");\n        card.innerHTML = `\r\n            <p>${day.datetime}</p>\r\n            <p>${Math.round(day.temp)}</p>\r\n            <p>${Math.round(day.tempmax)}°/${Math.round(day.tempmin)}°</p>\r\n        `;\n        cardContainer.append(card);\n    }\n}\n\n\n//# sourceURL=webpack://simple-weather-app/./src/modules/dom-manipulation.ts?\n}");
+eval("{\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.updateMainInfo = updateMainInfo;\nexports.updateConditionCards = updateConditionCards;\nexports.generateHourlyCards = generateHourlyCards;\nexports.generateDailyCards = generateDailyCards;\nconst data_manipulation_1 = __webpack_require__(/*! ./data-manipulation */ \"./src/modules/data-manipulation.ts\");\nconst icons_1 = __webpack_require__(/*! ./icons */ \"./src/modules/icons.ts\");\nfunction updateContent(htmlObject, newValue) {\n    return htmlObject.textContent = newValue;\n}\nfunction updateMainInfo(dataObject) {\n    const mainTemp = document.querySelector(\"#main-temp\");\n    const tempHigh = document.querySelector(\"#temp-high\");\n    const tempLow = document.querySelector(\"#temp-low\");\n    const weatherState = document.querySelector(\"#weather-state\");\n    const feelsLike = document.querySelector(\"#temp-sensation\");\n    updateContent(mainTemp, `${dataObject.currentConditions.temp}°`);\n    updateContent(tempHigh, `${Math.round((0, data_manipulation_1.getTemp)(dataObject.days, \"max\"))}°`);\n    updateContent(tempLow, `${Math.round((0, data_manipulation_1.getTemp)(dataObject.days, \"min\"))}°`);\n    updateContent(weatherState, dataObject.currentConditions.conditions);\n    updateContent(feelsLike, `${dataObject.currentConditions.feelslike}°`);\n}\nfunction updateConditionCards(dataObject) {\n    const windSpeed = document.querySelector(\"#wind-speed\");\n    const windDirection = document.querySelector(\"#wind-direction\");\n    const humidityPerc = document.querySelector(\"#humidity-percentage\");\n    const dewPoint = document.querySelector(\"#dew-value\");\n    const uvIndex = document.querySelector(\"#uv-index\");\n    const uvScale = document.querySelector(\"#uv-scale\");\n    const pressure = document.querySelector(\"#pressure-value\");\n    updateContent(windSpeed, dataObject.currentConditions.windspeed);\n    updateContent(windDirection, dataObject.currentConditions.winddir);\n    updateContent(humidityPerc, dataObject.currentConditions.humidity);\n    updateContent(dewPoint, dataObject.currentConditions.dew);\n    updateContent(uvIndex, dataObject.currentConditions.uvindex);\n    updateContent(uvScale, dataObject.currentConditions.uvindex);\n    updateContent(pressure, dataObject.currentConditions.pressure);\n}\nfunction generateHourlyCards(dataObject) {\n    const cardContainer = document.querySelector(\"#hourly-forecast\");\n    const hourlyData = dataObject.days[0].hours; // Index zero represents the current day\n    cardContainer.innerHTML = \"\";\n    for (const hour of hourlyData) {\n        const card = document.createElement(\"div\");\n        card.classList.add(\"hour-card\");\n        card.innerHTML = `\r\n            <p>${Math.round(hour.temp)}°</p>\r\n            <img id=\"hour-icon\" src=\"${icons_1.weatherIcons[hour.icon]}\" alt=\"${hour.conditions}\">\r\n            <p>${(0, data_manipulation_1.to12HourFormat)(hour.datetime)}</p>\r\n        `;\n        cardContainer.append(card);\n    }\n}\nfunction generateDailyCards(dataObject) {\n    const cardContainer = document.querySelector(\"#weekly-forecast\");\n    const weekData = dataObject.days.slice(0, 7);\n    cardContainer.innerHTML = \"\";\n    for (const day of weekData) {\n        const card = document.createElement(\"div\");\n        card.classList.add(\"day-card\");\n        card.innerHTML = `\r\n            <p>${day.datetime}</p>\r\n            <div><p>${Math.round(day.precipprob)}%</p><img id=\"day-icon\" src=\"${icons_1.weatherIcons[day.icon]}\" alt=\"${day.conditions}\"></div>\r\n            <p>${Math.round(day.tempmax)}°/${Math.round(day.tempmin)}°</p>\r\n        `;\n        cardContainer.append(card);\n    }\n}\n\n\n//# sourceURL=webpack://simple-weather-app/./src/modules/dom-manipulation.ts?\n}");
+
+/***/ }),
+
+/***/ "./src/modules/icons.ts":
+/*!******************************!*\
+  !*** ./src/modules/icons.ts ***!
+  \******************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+eval("{\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.weatherIcons = void 0;\nconst clear_day_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/clear-day.png */ \"./src/assets/weather-icons/clear-day.png\"));\nconst clear_night_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/clear-night.png */ \"./src/assets/weather-icons/clear-night.png\"));\nconst cloudy_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/cloudy.png */ \"./src/assets/weather-icons/cloudy.png\"));\nconst fog_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/fog.png */ \"./src/assets/weather-icons/fog.png\"));\nconst hail_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/hail.png */ \"./src/assets/weather-icons/hail.png\"));\nconst partly_cloudy_day_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/partly-cloudy-day.png */ \"./src/assets/weather-icons/partly-cloudy-day.png\"));\nconst partly_cloudy_night_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/partly-cloudy-night.png */ \"./src/assets/weather-icons/partly-cloudy-night.png\"));\nconst rain_snow_showers_day_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/rain-snow-showers-day.png */ \"./src/assets/weather-icons/rain-snow-showers-day.png\"));\nconst rain_snow_showers_night_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/rain-snow-showers-night.png */ \"./src/assets/weather-icons/rain-snow-showers-night.png\"));\nconst rain_snow_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/rain-snow.png */ \"./src/assets/weather-icons/rain-snow.png\"));\nconst rain_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/rain.png */ \"./src/assets/weather-icons/rain.png\"));\nconst showers_day_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/showers-day.png */ \"./src/assets/weather-icons/showers-day.png\"));\nconst showers_night_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/showers-night.png */ \"./src/assets/weather-icons/showers-night.png\"));\nconst sleet_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/sleet.png */ \"./src/assets/weather-icons/sleet.png\"));\nconst snow_showers_day_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/snow-showers-day.png */ \"./src/assets/weather-icons/snow-showers-day.png\"));\nconst snow_showers_night_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/snow-showers-night.png */ \"./src/assets/weather-icons/snow-showers-night.png\"));\nconst snow_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/snow.png */ \"./src/assets/weather-icons/snow.png\"));\nconst thunder_rain_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/thunder-rain.png */ \"./src/assets/weather-icons/thunder-rain.png\"));\nconst thunder_showers_day_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/thunder-showers-day.png */ \"./src/assets/weather-icons/thunder-showers-day.png\"));\nconst thunder_showers_night_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/thunder-showers-night.png */ \"./src/assets/weather-icons/thunder-showers-night.png\"));\nconst thunder_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/thunder.png */ \"./src/assets/weather-icons/thunder.png\"));\nconst wind_png_1 = __importDefault(__webpack_require__(/*! ../assets/weather-icons/wind.png */ \"./src/assets/weather-icons/wind.png\"));\nexports.weatherIcons = {\n    \"clear-day\": clear_day_png_1.default,\n    \"clear-night\": clear_night_png_1.default,\n    \"cloudy\": cloudy_png_1.default,\n    \"fog\": fog_png_1.default,\n    \"hail\": hail_png_1.default,\n    \"partly-cloudy-day\": partly_cloudy_day_png_1.default,\n    \"partly-cloudy-night\": partly_cloudy_night_png_1.default,\n    \"rain-snow-showers-day\": rain_snow_showers_day_png_1.default,\n    \"rain-snow-showers-night\": rain_snow_showers_night_png_1.default,\n    \"rain-snow\": rain_snow_png_1.default,\n    \"rain\": rain_png_1.default,\n    \"showers-day\": showers_day_png_1.default,\n    \"showers-night\": showers_night_png_1.default,\n    \"sleet\": sleet_png_1.default,\n    \"snow-showers-day\": snow_showers_day_png_1.default,\n    \"snow-showers-night\": snow_showers_night_png_1.default,\n    \"snow\": snow_png_1.default,\n    \"thunder-rain\": thunder_rain_png_1.default,\n    \"thunder-showers-day\": thunder_showers_day_png_1.default,\n    \"thunder-showers-night\": thunder_showers_night_png_1.default,\n    \"thunder\": thunder_png_1.default,\n    \"wind\": wind_png_1.default\n};\n\n\n//# sourceURL=webpack://simple-weather-app/./src/modules/icons.ts?\n}");
 
 /***/ }),
 
