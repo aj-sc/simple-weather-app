@@ -122,7 +122,8 @@ main {
     gap: 0.5rem;
     padding: var(--basic-padding);
     overflow-x: auto;
-    scrollbar-width: none;      /* Firefox */
+    scrollbar-width: none;/* Firefox */
+    outline: 1px solid var(--main-color);
 }
 
 #hourly-forecast::-webkit-scrollbar {

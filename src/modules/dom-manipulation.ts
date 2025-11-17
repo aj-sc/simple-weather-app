@@ -86,3 +86,5 @@ export function generateDailyCards(dataObject: WeatherObject): void {
         cardContainer.append(card);
     }
 }
+
+
