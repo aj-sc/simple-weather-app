@@ -2,8 +2,8 @@ import "./style.css";
 import { fetchWeatherData } from "./modules/weather-object";
 import { applyThemeBasedOnTime, updateMainInfo, updateConditionCards, generateHourlyCards, generateDailyCards } from "./modules/dom-manipulation";
 
-const searchBtn = document.querySelector<HTMLButtonElement>("#search-btn");
-const locationInput = document.querySelector<HTMLInputElement>("#location-input");
+const searchBtn = document.querySelector("#search-btn")!;
+const locationInput = document.querySelector<HTMLInputElement>("#location-input")!;
 
 let defaultLocation: string | null = localStorage.getItem("defaultLocation");
 
