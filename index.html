@@ -11,7 +11,7 @@
             <div id="search-bar">
                 <input type="text" id="location-input" name="location" placeholder="Type the location">
                 <button id="search-btn">
-                    <img id="search-icon" src="8f550a041ce4bbca4b50.svg" alt="">
+                    📍
                 </button>
             </div>
         </section>
@@ -23,11 +23,12 @@
                 <div id="weather-info">
                     <div class="left-info">
                         <h1 id="main-temp"></h1>
-                        <p>High: <span id="temp-high">26</span> - Low: <span id="temp-low">22</span></p>
+                        <p id="high-low"></p>
                     </div>
                     <div class="rigth-info">
                         <p id="weather-state"></p>
-                        <p>Feels like <span id="temp-sensation"></span></p>
+                        <p id="temp-sensation"></p>
+                        <img id="state-icon">
                     </div>
                 </div>
             </div>
@@ -40,20 +41,20 @@
                         <p>Wind</p>
                         <div class="condition-content">
                             <div class="condition-info">
-                                <p><span id="wind-speed"></span> km/h</p>
-                                <p><span id="wind-direction"></span>°</p>
+                                <p id="wind-speed"></p>
+                                <p id="wind-direction"></p>
                             </div>
-                            <div class="condition-icon"></div>
+                            <p class="condition-icon ">🍃</p>
                         </div>
                     </div>
                     <div class="condition-card">
                         <p>Humidity</p>
                         <div class="condition-content">
                             <div class="condition-info">
-                                <p><span id="humidity-percentage"></span>%</p>
-                                <p id="dew-point">Dew point <span id="dew-value"></span>°</p>
+                                <p id="humidity-percentage"></p>
+                                <p id="dew-point"></p>
                             </div>
-                            <div class="condition-icon"></div>
+                            <p class="condition-icon ">♨️</p>
                         </div>
                     </div>
                     <div class="condition-card">
@@ -63,7 +64,7 @@
                                 <p id="uv-index"></p>
                                 <p id="uv-scale"></p>
                             </div>
-                            <div class="condition-icon"></div>
+                            <p class="condition-icon ">☀️</p>
                         </div>
                     </div>
                     <div class="condition-card">
@@ -71,9 +72,9 @@
                         <div class="condition-content">
                             <div class="condition-info">
                                 <p id="pressure-value"></p>
-                                <p id="pressure-scale">mb</p>
+                                <p id="pressure-scale">mBar</p>
                             </div>
-                            <div class="condition-icon"></div>
+                            <p class="condition-icon ">🌡️</p>
                         </div>
                     </div>
                 </div>
@@ -93,8 +94,8 @@
                 </div>
             </div>
         </section>
-        <section class="content">
-            <a href="#">Created by aj-sc</a>
+        <section class="content" id="created-by">
+            <a href="https://github.com/aj-sc">aj-sc</a>
         </section>
     </main>
 </body>
