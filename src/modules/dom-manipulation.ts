@@ -1,12 +1,25 @@
 import { WeatherObject } from "./weather-object";
-import { getTemp, to12HourFormat } from "./data-manipulation";
+import { getTemp, to12HourFormat, uvIndexScale, get24HourData } from "./data-manipulation";
 import { weatherIcons } from "./icons";
+
+export function applyThemeBasedOnTime() {
+    const hour = new Date().getHours();
+    
+    const isNight = hour >= 19 || hour < 5;
+
+    if (isNight) {
+        document.body.classList.add("dark-theme");
+    } else {
+        document.body.classList.remove("dark-theme");
+    }
+}
 
 export function updateMainInfo(dataObject: WeatherObject): void {
     const mainTemp = document.querySelector("#main-temp")!;
     const highAndLow = document.querySelector("#high-low")!;
     const weatherState = document.querySelector("#weather-state")!;
     const feelsLike = document.querySelector("#temp-sensation")!;
+    const stateIcon = document.querySelector<HTMLImageElement>("#state-icon")!;
 
     const maxTemp = Math.round(getTemp(dataObject.days, "max"));
     const minTemp = Math.round(getTemp(dataObject.days, "min"));
@@ -16,6 +29,9 @@ export function updateMainInfo(dataObject: WeatherObject): void {
 
     weatherState.textContent = dataObject.currentConditions.conditions;
     feelsLike.textContent = `Feels like ${Math.round(dataObject.currentConditions.feelslike)}°`;
+
+    stateIcon.src = weatherIcons[dataObject.currentConditions.icon]!;
+    stateIcon.alt = dataObject.currentConditions.conditions;
 }
 
 export function updateConditionCards(dataObject: WeatherObject): void {
@@ -31,20 +47,22 @@ export function updateConditionCards(dataObject: WeatherObject): void {
     const pressure = document.querySelector("#pressure-value")!;
 
     windSpeed.textContent = `${dataObject.currentConditions.windspeed} km/h`;
-    windDirection.textContent = `${dataObject.currentConditions.winddir}°`;
+    windDirection.textContent = `${dataObject.currentConditions.winddir}° (degrees from the north)`;
 
     humidityPerc.textContent = `${dataObject.currentConditions.humidity}%`;
     dewPoint.textContent = `Dew point ${dataObject.currentConditions.dew}°`;
 
     uvIndex.textContent = dataObject.currentConditions.uvindex;
-    uvScale.textContent = dataObject.currentConditions.uvindex;
+    uvScale.textContent = uvIndexScale(dataObject.currentConditions.uvindex);
 
     pressure.textContent = dataObject.currentConditions.pressure;
 }
 
 export function generateHourlyCards(dataObject: WeatherObject): void {
     const cardContainer = document.querySelector("#hourly-forecast")!;
-    const hourlyData = dataObject.days[0].hours; // Index zero represents the current day
+
+
+    const hourlyData = get24HourData(dataObject.days); // Index zero represents the current day
     
     cardContainer.innerHTML = "";
 

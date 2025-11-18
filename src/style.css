@@ -1,13 +1,25 @@
 /* Basic style config */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
+    --bg-color: #E8F6FD;
     --basic-padding: 0.5rem;
     --minimal-spacing: 0.5rem;
     --basic-spacing: 1rem;
     --basic-border-radius: 5px;
-    --main-color: #002B49;
-    --secondary-color: #FF6C0E;
-    --day-color: #E8F6FD;
+    --text-color: black;
+    --card-bg: white;
+    --outline-color: #002B49;
+    --input-bg: white;
+}
+
+.dark-theme {
+    --bg-color: #121212;
+    --text-color: #DBDBDB;
+    --card-bg: #212121;
+    --outline-color: #212121;
+    --input-bg: #DBDBDB;
 }
 
 * {
@@ -17,8 +29,8 @@
 }
 
 body {
-    background: var(--day-color);
-    font-family: sans-serif;
+    background: var(--bg-color);
+    font-family: "Inter", sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -44,33 +56,42 @@ main {
     padding: var(--basic-padding);
 }
 
+h1, h4, p, a {
+    color: var(--text-color);
+}
+
 #search-bar {
     width: 100%;
-    display: flex;
-    align-items: center;
-    gap: var(--basic-padding);
-    border-radius: var(--basic-border-radius);
-    padding: var(--basic-padding) 0;
+    position: relative;
 }
 
-#search-bar > input {
-    flex: 1;
-    padding: var(--basic-padding);
-    border-radius: var(--basic-border-radius);
+#location-input {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: var(--input-bg);
+    font-size: 14px;
 }
 
-#search-bar > button {
-    flex: 0 0 auto;
-    padding: var(--basic-padding);
-    border-radius: var(--basic-border-radius);
+#search-btn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 32px;
+    width: 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#search-bar > button img {
-    width: 24px;
-    height: 24px;
 }
 
 .content > div {
@@ -91,6 +112,7 @@ main {
     display: flex;
     justify-content: space-between;
     padding: var(--basic-padding);
+    outline: 1px solid var(--outline-color);
 }
 
 #main-temp {
@@ -109,12 +131,37 @@ main {
 }
 
 .condition-card {
-    outline: 1px solid var(--main-color);
+    outline: 1px solid var(--outline-color);
     border-radius: var(--basic-border-radius);
     padding: var(--basic-padding);
     display: flex;
     flex-direction: column;
     gap: var(--basic-spacing);
+}
+
+.condition-content {
+    display: flex;
+    gap: var(--minimal-spacing);
+    justify-content: space-between;
+}
+
+.condition-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.condition-card > p {
+    font-weight: 600;
+}
+
+.condition-info > p:last-child {
+    font-size: 12px;
+}
+
+.condition-icon {
+    font-size: 25px;    
 }
 
 #hourly-forecast {
@@ -123,7 +170,7 @@ main {
     padding: var(--basic-padding);
     overflow-x: auto;
     scrollbar-width: none;/* Firefox */
-    outline: 1px solid var(--main-color);
+    outline: 1px solid var(--outline-color);
 }
 
 #hourly-forecast::-webkit-scrollbar {
@@ -140,7 +187,6 @@ main {
     gap: 0.25rem;
     padding: var(--basic-padding);
     border-radius: var(--basic-border-radius);
-    outline: 1px solid var(--main-color);
 }
 
 .hour-card > p {
@@ -148,7 +194,7 @@ main {
 }
 
 #hourly-conditions {
-    outline: 1px solid var(--main-color);
+    outline: 1px solid var(--outline-color);
     padding: var(--basic-padding);
 }
 
@@ -160,7 +206,7 @@ main {
 
 #condition-buttons > button {
     flex: 1;
-    outline: 1px solid var(--main-color);
+    outline: 1px solid var(--outline-color);
     background: none;
     border: none;
     padding: 5px;
@@ -178,11 +224,11 @@ main {
     justify-content: space-between;
     padding: var(--basic-padding);
     border-radius: var(--basic-border-radius);
-    outline: 1px solid var(--main-color);
+    outline: 1px solid var(--outline-color);
 }
 
-#hourly-forecast, .day-card, .condition-card, #hourly-conditions {
-    background: white;
+#weather-info, #hourly-forecast, .day-card, .condition-card, #hourly-conditions {
+    background: var(--card-bg);
 }
 
 #hour-icon, #day-icon {
@@ -197,8 +243,4 @@ main {
 
 #created-by {
     text-align: center;
-}
-
-a {
-    color: var(--main-color);
 }

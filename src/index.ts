@@ -1,9 +1,6 @@
 import "./style.css";
-import globeIcon from "./assets/globe.svg";
 import { fetchWeatherData } from "./modules/weather-object";
-import { updateMainInfo, updateConditionCards, generateHourlyCards, generateDailyCards } from "./modules/dom-manipulation";
-
-document.querySelector("#search-icon")!.setAttribute("src", globeIcon);
+import { applyThemeBasedOnTime, updateMainInfo, updateConditionCards, generateHourlyCards, generateDailyCards } from "./modules/dom-manipulation";
 
 const searchBtn = document.querySelector<HTMLButtonElement>("#search-btn");
 const locationInput = document.querySelector<HTMLInputElement>("#location-input");
@@ -14,6 +11,8 @@ if (!defaultLocation) {
     defaultLocation = prompt("Type the name of your current city (this would be your default location): ");
     localStorage.setItem("defaultLocation", defaultLocation!);
 }
+
+applyThemeBasedOnTime();
 
 window.addEventListener("load", async () => {
     const data = await fetchWeatherData(defaultLocation!);
@@ -29,7 +28,6 @@ searchBtn?.addEventListener("click", async () => {
 
     if (locationValue.trim() !== "") {
         const data = await fetchWeatherData(locationValue);
-        console.log(data);
 
         updateMainInfo(data);
         updateConditionCards(data);
